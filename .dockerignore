@@ -1,0 +1,7 @@
+.git
+.gitignore
+miniprogram
+tests
+docs
+deploy
+*.log
