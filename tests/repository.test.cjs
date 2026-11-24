@@ -53,7 +53,7 @@ test('mini program keeps nine subpackages and five compressed water stages', () 
   }
   assert.ok(size(miniRoot) - subpackageBytes < 2 * 1024 * 1024);
   assert.ok(size(miniRoot) < 30 * 1024 * 1024);
-  assert.equal(require(path.join(miniRoot, 'shared/build-info.js')).id, 'MINI-CLEAN-20261121-01');
+  assert.equal(require(path.join(miniRoot, 'shared/build-info.js')).id, 'MINI-CONTEST-20261124-01');
 });
 
 test('HTTP API is read-only and serves the mini-program contracts', async t => {

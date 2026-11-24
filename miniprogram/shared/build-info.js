@@ -1,7 +1,7 @@
 'use strict';
-// Unique marker for the first self-contained mini-program repository build.
+// Competition build with bundled backend content and no API requirement.
 module.exports = {
-  "id": "MINI-CLEAN-20261121-01",
-  "revision": "standalone-initial",
-  "builtAt": "2026-11-21T00:00:00.000Z"
+  "id": "MINI-CONTEST-20261124-01",
+  "revision": "contest-bundled-content",
+  "builtAt": "2026-11-24T00:00:00.000Z"
 };

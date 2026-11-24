@@ -2,6 +2,9 @@ var contract = require('./home-contract');
 var config = require('./config');
 function failure(code, message) { var error = new Error(message); error.code = code; return error; }
 function requestHome() {
+  if (config.isBundled()) {
+    return require('./bundled-content').home(contract.isHomeResponse);
+  }
   var task;
   var promise = new Promise(function(resolve, reject) {
     var settings;

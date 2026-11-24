@@ -8,6 +8,13 @@ function failure(code, message) {
 }
 
 function requestStory(id) {
+  // Validate IDs before looking up the local snapshot or constructing an API URL.
+  if (!Number.isInteger(id) || id <= 0) {
+    return { promise: Promise.reject(failure('INVALID_ID', '故事编号无效。')), abort: function() {} };
+  }
+  if (config.isBundled()) {
+    return require('./bundled-content').story(id, contract.isStoryResponse);
+  }
   var task;
   var promise = new Promise(function(resolve, reject) {
     var settings;
